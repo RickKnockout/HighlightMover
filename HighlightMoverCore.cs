@@ -83,17 +83,12 @@ namespace HighlightMover
                     }
 
                     Input.Click(System.Windows.Forms.MouseButtons.Left);
-                    yield return new WaitTime(2);
                     Input.Click(System.Windows.Forms.MouseButtons.Left);
-                    yield return new WaitTime(2);
                     Input.Click(System.Windows.Forms.MouseButtons.Left);
-                    yield return new WaitTime(2);
 
                     Input.KeyUp(System.Windows.Forms.Keys.LControlKey);
-                    yield return new WaitTime(2);
                 }
 
-                yield return new WaitTime(rand.Next(2, 5));
             }
             running = false;
         }
