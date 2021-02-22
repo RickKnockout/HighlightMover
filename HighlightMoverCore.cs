@@ -70,8 +70,7 @@ namespace HighlightMover
                     MoveMouseToElement(item.GetClientRect().Center);
                     yield return new WaitTime(2);
                     Input.KeyDown(System.Windows.Forms.Keys.LControlKey);
-                    yield return new WaitTime(2);
-            
+                    yield return new WaitTime(2);            
                     uiTabsOpened = GameController.Game.IngameState.IngameUi.InventoryPanel.IsVisible &&
                               GameController.Game.IngameState.IngameUi.StashElement.IsVisibleLocal;
 
@@ -83,11 +82,9 @@ namespace HighlightMover
                     }
 
                     Input.Click(System.Windows.Forms.MouseButtons.Left);
-                    Input.Click(System.Windows.Forms.MouseButtons.Left);
-                    Input.Click(System.Windows.Forms.MouseButtons.Left);
-
+                    yield return new WaitTime(2);                  
                     Input.KeyUp(System.Windows.Forms.Keys.LControlKey);
-                    
+                    yield return new WaitTime(5);
                 }
 
             }
